@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+ul {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+label,
+button,
+select,
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+html {
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #f1faee;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #1d3557;
+}
+
+a:active {
+  color: #e63946;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1d3557;
+  font-family: 'Jura', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body > * {
+  padding: 1rem;
+}
+
+header,
+footer {
+  background-color: #a8dadc;
+  display: flex;
+  justify-content: space-between;
+}
