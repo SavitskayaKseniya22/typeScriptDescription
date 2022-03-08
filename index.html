@@ -10,10 +10,175 @@
   <body>
     <header>
       <h1>TypeScriptDescription</h1>
+      <img src="./TypeScript logo.svg" alt="logo" class='header__logo'>
     </header>
-    <main></main>
+    <main>
+      <div class="main-info">
+        <section>
+          <h2>Базовые типы</h2>
+          <ul class='base-types-list'>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#boolean" target='_blank'>Boolean</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#number" target="_blank">Number</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#string" target="_blank">String</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#array" target="_blank" >Array</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple" target="_blank">Tuple</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#enum" target="_blank">Enum</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#any" target="_blank">Any</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#null-and-undefined" target="_blank">Null и undefined</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#void" target="_blank">Void</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#never" target="_blank">Never</a></li>
+            <li><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#unknown" target="_blank">Unknown</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Установка TypeScript</h2>
+          <p>
+            Установить TypeScript совсем не сложно — достаточно загрузить его через пакетный менеджер npm и создать
+            TypeScript-файл: 
+          </p>
+          <code>npm install -g typescript</code>
+        </section>
+        <section>
+          <h2>Присвоение типов</h2>
+          <ul>
+            <li>
+              <h3>Одиночный тип переменной</h3>
+              <p>Такой способ действителен для всех типов данных.</p>
+              <code>let str: string = 'Hello World'</code>
+            </li>
+            <li>
+              <h3>Мультитип переменной</h3>
+              <p>Переменной можно присваивать несколько типов, перечисляя их через оператор |.</p>
+              <code>let multitypeVar: string | number = 'String'</code>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Проверка типов</h2>
+          <ul>
+            <li>
+              <h3>Typeof</h3>
+              <p>Команда typeof работает только с базовыми типами данных.</p>
+            </li>
+            <li>
+              <h3>Instanceof</h3>
+              <p>Оператор может определять не только базовые типы, но и собственные.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Массивы</h2>
+          <ul>
+            <li>
+              <h3>Создание</h3>
+              <ul>
+                <li>
+                  <h4>Используя []</h4>
+                  <code>let strings: string[] = ['Hello', 'World', '!']</code>
+                </li>
+                <li>
+                  <h4>Используя дженерики</h4>
+                  <code>let numbers: Array<number> = [1, 2, 3, 4, 5]</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Мультитипные массивы</h3>
+              <code>
+                let stringsAndNumbers: (string | number)[] = ['Age', 20]
+              </code>
+            </li>
+            <li>
+              <h3>Многомерные массивы</h3>
+              <code>
+                let numbersArray: number[][] = [[1,2,3,4,5], [6,7,8,9,10]]
+              </code>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Enum (перечисление)</h2>
+          <p>Возможность создавать текстовые и числовые константы. Определяются перечисления ключевым словом enum.</p>
+          <ul>
+            <li>
+              <h3>Числовые константы</h3>
+              <code>enum State{
+                Playing = 0,
+                Paused = 1,
+                Stopped = 2
+               }</code>
+            </li>
+            <li>
+              <h3>Текстовые константы</h3>
+              <code>enum State{
+                Playing = 'PLAYING',
+                Paused = 'PAUSED',
+                Stopped = 'STOPPED'
+               }</code>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Модификаторы доступа</h2>
+          <ul>
+            <li>
+              <h3>public</h3>
+              <p>Элементы с этим модификатором доступны отовсюду без каких-либо ограничений. Этот модификатор установлен по умолчанию.</p>
+            </li>
+            <li>
+              <h3>private</h3>
+              <p>Элементы с этим модификатором доступны только из того класса, в котором они определены.</p>
+            </li>
+            <li>
+              <h3>protected</h3>
+              <p>Элементы с этим модификатором доступны из класса, в котором они определены, и в подклассах/производных классах.</p>
+            </li>
+          </ul>
+        </section>
+        
+      </div>
+      <aside class="aside">
+        <div class="aside__content">
+          <dl>
+          <dt><strong>TypeScript</strong></dt>
+          <dd>
+            язык программирования, представленный Microsoft в 2012 году и позиционируемый как средство разработки
+            веб-приложений, расширяющее возможности JavaScript. Разработчиком языка TypeScript является Андерс Хейлсберг
+            (англ. Anders Hejlsberg), создавший ранее Turbo Pascal, Delphi и C#.
+          </dd>
+        </dl>
+        <h2>Преимущества</h2>
+        <ol>
+          <li>
+            <h2>Статическая типизация</h2>
+             JavaScript — это язык с динамической типизацией, то есть компилятор не знает, что за
+            тип переменной вы используете, пока эта переменная не будет инициализирована. Подобные вещи могут вызвать
+            трудности и ошибки в ваших проектах. В TypeScript появляется поддержка статической типизации, что при
+            грамотном использовании исключает ошибки, связанные с ошибочной типизацией переменной. При этом динамическая
+            типизация вовсе не пропадает, и ей можно пользоваться.
+          </li>
+          <li>
+            <h2>Лучшая поддержка в IDE</h2>
+            Основным преимуществом языка TypeScript перед JavaScript является лучшая поддержка
+            со стороны IDE, что включает Intellisense, информацию компилятора в реальном времени, отладку и многое
+            другое. Также существуют различные расширения, которые помогают в процессе разработки.
+          </li>
+          <li>
+            <h2>Доступ к новым возможностям ECMAScript</h2>
+            В TypeScript есть поддержка новых возможностей ECMAScript, поэтому
+            можно разрабатывать приложения с помощью новейших инструментов, не волнуясь о поддержке их браузером.
+          </li>
+        </ol>
+        </div>
+        
+        <figure>
+          <img src="./jstots.jpg" width="300" height="250" alt="js">
+          <figcaption>Typescript это надмножество JavaScript</figcaption>
+        </figure>
+      </aside>
+    </main>
     <footer>
-      <p>test task for <a href="https://digdes.ru/" target="_blank">DigitalDesign</a></p>
+      <p>task for <a href="https://digdes.ru/" target="_blank">DigitalDesign</a></p>
       <a href="https://github.com/SavitskayaKseniya22" target="_blank">made by Savitskaya Kseniya</a>
       <span>2022</span>
     </footer>

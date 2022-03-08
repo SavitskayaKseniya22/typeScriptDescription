@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-ul {
-  list-style-type: none;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -31,10 +27,6 @@ h3 {
   margin: 0;
 }
 
-li {
-  list-style-type: none;
-}
-
 a {
   color: #f1faee;
   text-decoration: none;
@@ -42,7 +34,7 @@ a {
 }
 
 a:hover {
-  color: #1d3557;
+  color: #e63946;
 }
 
 a:active {
@@ -57,9 +49,12 @@ h2 {
   font-size: 1.5rem;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
-  background-color: #1d3557;
   font-family: 'Jura', sans-serif;
   display: flex;
   flex-direction: column;
@@ -67,12 +62,108 @@ body {
 }
 
 body > * {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 header,
 footer {
-  background-color: #a8dadc;
+  background-color: #1d3557;
+  color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.main-info {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+section {
+  background-color: #a8dadc;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+section ul,
+.aside ol {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+section li,
+.aside ol li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.aside {
+  order: 1;
+  width: 100%;
+  padding: 2rem;
+  background-color: #457b9d;
+  color: white;
+  display: flex;
+  row-gap: 1rem;
+  flex-grow: 1;
+  align-self: flex-start;
+}
+
+code {
+  background: #f1faee;
+  padding: 1rem;
+  display: block;
+}
+
+.base-types-list {
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+.base-types-list li {
+  padding: 0.5rem;
+  background: #f1faee;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.base-types-list a {
+  color: #1d3557;
+  font-weight: bold;
+}
+
+.base-types-list a:hover {
+  color: #e63946;
+}
+
+dl {
+  background-color: #e63946;
+  padding: 0.5rem;
+}
+
+.header__logo {
+  width: 100px;
+  height: 100px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
